@@ -1,0 +1,24 @@
+/* Animation for <p> tag - Slide-in from left */
+.slide-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 2s ease, transform 3s ease;
+  }
+  
+  .slide-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  /* Animation for <u> tag - Scale and fade */
+  .scale-in {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  
+  .scale-in.visible {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
