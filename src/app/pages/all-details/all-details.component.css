@@ -1,0 +1,27 @@
+.card-hover {
+    transition: transform 1s ease-in-out;
+}
+
+.card-hover:hover {
+    transform: scale(1.1);
+}
+.typing-container {
+    font-size: 24px;
+
+    
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+    animation: typing 5s steps(20, end) infinite alternate,
+               blink 20s infinite;
+}
+
+@keyframes typing {
+    0% { width: 0; }
+    50% { width: 100%; } /* Typing effect */
+    100% { width: 0; } /* Erasing effect */
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}

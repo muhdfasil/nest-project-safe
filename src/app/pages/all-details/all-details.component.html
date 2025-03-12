@@ -1,0 +1,43 @@
+<!-- <div class="mailAllDetails">
+    @for(item of details;track item.id){
+    <div class="card text-center" style="width: 18rem;">
+        <img src="{{item.image}}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{item.firstName}}</h5>
+            <p class="card-text">
+                {{item.address.address}} <br>
+                {{item.address.city}} <br>
+                {{item.address.state}} <br>
+                {{item.address.postalCode}}
+            </p>
+            <a href="#" class="btn btn-primary">More details</a>
+        </div>
+    </div>
+    }
+</div> -->
+
+
+
+<div class="container mt-3">
+    <div class="row">
+        @for (item of details; track item.id) {
+            <div class="col-md-4 d-flex justify-content-center mb-4">
+                <div class="card text-center card-hover" style="width: 18rem;">
+                    <img src="{{item.image}}" class="card-img-top " alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title typing-container">{{item.firstName}}</h5>
+                        <p class="card-text">
+                            {{item.address.address}} <br>
+                            {{item.address.city}} <br>
+                            {{item.address.state}} <br>
+                            {{item.address.postalCode}}
+                        </p>
+                         <!-- <button class="btn btn-primary" routerLink="user-details/{{item.id}}">More details</button> -->
+                         <button class="btn btn-primary" [routerLink]="['/user-details', item.id]">More details</button>
+
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
